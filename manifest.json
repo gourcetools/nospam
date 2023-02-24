@@ -1,0 +1,26 @@
+{
+  "name": "Nospam",
+  "version": "1.0",
+  "description": "Filter content based on the selected language",
+  "manifest_version": 3,
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_icon": "icon.png",
+    "default_title": "Language Filter",
+    "default_popup": "popup.html"
+  }
+}
+
